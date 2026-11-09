@@ -21,7 +21,7 @@ npm start
 
 打开 `http://127.0.0.1:8787`。不需要联网和模型密钥（离线规划器 + 真实工具）。设置 `DEEPSEEK_API_KEY` 后可在右上角切到「在线 DeepSeek」。
 
-没有 Node 环境时，直接用浏览器打开 `apps/workbench/index.html`（经本地 HTTP 服务更稳），会播放从真实运行录制的会话。
+没有 Node 环境时，直接用浏览器打开 `apps/workbench/index.html`，或访问在线演示 **https://realzeelin.github.io/brandHarness/**（GitHub Pages，播放从真实运行录制的会话；设想设计页：`/concept.html`）。
 
 ## 接入 DeepSeek Harness
 

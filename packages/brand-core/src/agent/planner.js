@@ -3,7 +3,7 @@
  * 工具调用全部真实执行（数字来自算法层），模型只负责组织语言 —— 这里用模板组织语言，在线模式由 DeepSeek 组织。
  * 设计模式：总控路由（Router）+ 专家执行（Orchestrator-Workers）+ 技能 SOP + 工具层 + 校验闸门 + 人在环 + 回写沉淀。
  */
-import { runTool } from '../tools.js'
+import { runTool, getTool } from '../tools.js'
 import { experts } from '../modules.js'
 import { listSkills } from '../skills.js'
 
@@ -16,7 +16,7 @@ export const SCENARIOS = [
   { id: 'geo', expert: 'geo', skill: 'geo-fact-correction', scene: 4, label: 'AI 答案纠偏', prompt: '巡检一下 AI 平台怎么讲福临门，有错的起草纠偏素材。', re: /AI ?答案|GEO|豆包|Kimi|DeepSeek.*(说|讲)|纠偏|品牌事实|大模型推荐/i },
   { id: 'campaign', expert: 'activity', skill: 'campaign-review', scene: 7, label: '活动与渠道复盘', prompt: '复盘一下卖点在用户侧的复述情况，再看抖音渠道趋势能不能叫稳定增长。', re: /活动|投放|复盘|抖音|渠道|种草|达人/ },
   { id: 'annual', expert: 'lead', skill: 'fulinmen-annual-report', scene: 0, label: '2027 年度报告', prompt: '出一份 2027 福临门油脂电商经营报告的大纲草稿，调度各专家分工。', re: /年度|年报|2027|经营报告|全年/ },
-  { id: 'data', expert: 'lead', skill: null, scene: 0, label: '数据接入', prompt: '现在有哪些数据源？我想把小红书新采的笔记推进来。', re: /数据源|导入|推入|接入|上传|数据流|更新数据/ },
+  { id: 'data', expert: 'lead', skill: null, scene: 0, label: '数据接入', prompt: '现在有哪些数据源？我想把小红书新采的笔记推进来。', re: /数据源|导入|推入|推进来|推送|接入|上传|数据流|更新数据|同步数据|新数据/ },
   { id: 'capture', expert: 'lead', skill: null, scene: 0, label: '沉淀为技能', prompt: '把刚才这次分析的做法沉淀成一个技能。', re: /沉淀|写成技能|保存.*技能|技能.*(新建|沉淀|回写)/ },
   { id: 'overview', expert: 'lead', skill: null, scene: 0, label: '一屏巡检', prompt: '今天福临门整体情况怎么样？有没有异常？', re: /态势|巡检|异常|预警|整体|概况|今天|怎么样/ }
 ]
@@ -240,17 +240,21 @@ const RUNNERS = {
 
   async capture(ctx, { history }) {
     think(ctx, '把一次成功的分析沉淀成技能说明：何时使用、可用工具、步骤、约束、输出。技能是文字，业务能读能改；保存是写操作，需要你确认。')
-    planEv(ctx, ['回看本次会话的工具链', '起草技能说明', '确认后写入技能库（留痕）'])
-    const tools = [...new Set(history.flatMap(h => h.tools || []))]
-    const used = tools.length ? tools : ['insight_query', 'insight_evidence', 'social_labels', 'insight_compose', 'insight_publish']
-    const topic = history.at(-1)?.label || '卖点沟通诊断'
+    planEv(ctx, ['回看上一次分析的工具链', '起草技能说明', '确认后写入技能库（留痕）'])
+    const last = [...history].reverse().find(h => h.tools?.length && h.scenario !== 'capture')
+    const used = last ? [...new Set(last.tools.filter(t => !['skill_get', 'skill_save'].includes(t)))] : ['insight_query', 'insight_evidence', 'social_labels', 'insight_compose', 'insight_publish']
+    const topic = last?.label || '卖点沟通诊断'
+    const ask = last?.q || '福临门主图要不要继续加码「非转基因」'
     ctx.step(0)
-    const name = 'my-' + (history.at(-1)?.scenario || 'claim') + '-playbook'
-    const content = `---\nname: ${name}\ndescription: 由一次「${topic}」分析沉淀的工作方法；适用于同类卖点 / 话题判断\ntitle: ${topic} · 工作方法\nversion: v0.1\nowner: 我（待指定维护人）\nexpert: analyst\nboard: 食用油\ntools: [${used.join(', ')}]\ntrigger: 品牌经理交办同类判断时\n---\n\n# ${topic} · 工作方法\n\n## 何时使用\n- 业务要判断「某个卖点 / 话题要不要加码」时\n\n## 可用工具\n${used.map(t => '- `' + t + '`').join('\n')}\n\n## 步骤\n1. 社媒查声量与关键词命中，同时看促销话术占比\n2. 取原文，判断声音来自消费者还是渠道\n3. 电商查「标题提及率 vs 有效评价主动提及率」，两套分母不混算\n4. 口碑标签核对关注度\n5. 写结论卡，每个数字带 source，溯源率 100% 才可提交\n6. 提交签发，由品牌经理确认\n\n## 约束\n- 没有依据写「未知」，不推测\n- 负面样本 < 50 条不做负向结论\n- 未经审核不得签发\n\n## 输出\n- 结论卡（一句话结论 + 4 条依据 + 建议 + 风险）\n`
+    const slug = (last?.scenario || 't2411').replace(/[^a-z0-9]/g, '') || 'analysis'
+    const name = 'my-' + slug + '-playbook'
+    const steps = used.map((t, i) => { const d = getTool(t); return `${i + 1}. 调用 \`${t}\`（${d?.title || t}）：${(d?.description || '').split('。')[0]}` })
+    const writes = used.filter(t => !getTool(t)?.readOnly)
+    const content = `---\nname: ${name}\ndescription: 由一次「${topic}」分析沉淀的工作方法，适用于同类问题\ntitle: ${topic} · 工作方法\nversion: v0.1\nowner: 待指定维护人\nexpert: ${last?.expert || 'analyst'}\nboard: 食用油\ntools: [${used.join(', ')}]\ntrigger: 业务交办与「${ask.slice(0, 30)}」同类的问题时\n---\n\n# ${topic} · 工作方法\n\n## 何时使用\n- 业务交办与「${ask}」同类的问题\n\n## 可用工具\n${used.map(t => '- \`' + t + '\`：' + (getTool(t)?.title || '')).join('\n')}\n\n## 步骤（按本次实际执行顺序沉淀）\n${steps.join('\n')}\n\n## 约束\n- 每个数字都来自工具返回；没有依据写「未知」\n- 社媒与电商分母不可混算；负面样本 < 50 条不做负向结论\n${writes.length ? '- 写操作（' + writes.join(' / ') + '）必须由人确认\n' : ''}- 未经审核不得签发或对外\n\n## 输出\n- ${last?.label || '结论卡'}（交付物放入右侧栏，附证据链）\n\n## 修订建议\n- 由维护人补充：本品类特有的口径、阈值与常见误区\n`
     await ctx.call('skill_save', { name, content, author: '演示用户', note: '由会话沉淀', confirm: false }, { transport: 'MCP' })
     ctx.step(1)
     ctx.emit({ type: 'skill', name, content, status: 'needs_confirmation' })
-    text(ctx, `技能说明草稿 \`${name}\` 已放到右侧，可以直接改文字。点「确认写入技能库」后会记录修订人与版本；下次任何人交办同类问题，智能体都按这份说明来做。`)
+    text(ctx, `已按上一次「${topic}」实际调用的 ${used.length} 个工具起草技能说明 \`${name}\`，放在右侧，可以直接改文字。点「确认写入技能库」后记录修订人与版本；下次任何人交办同类问题，智能体都按这份说明来做。`)
     ctx.step(2, 'waiting')
   },
 

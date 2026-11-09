@@ -69,7 +69,7 @@ export function claimGap({ claims, platform } = {}) {
       reading: titleRate - reviewRate >= 5 ? '品牌主推、消费者少提（降级为信任状）' : reviewRate - titleRate >= 1 ? '消费者在意、标题少写（提到首屏）' : '基本对齐' }
   }).sort((a, b) => b.gapPt - a.gapPt)
   return { snapshot: ec.snap, platform: platform || '全部', base: { links: links.length, validReviews: valid.length }, claims: rows,
-    caveats: ['KSPEC-EC-04 卖点错位差值 = 标题提及率 − 评价主动提及率（百分点）', '存量口径：当前在售链接快照 × 全量有效评价'] }
+    caveats: ['KSPEC-EC-04 卖点错位差值 = 标题提及率 − 评价主动提及率（百分点）', '存量口径：当前在售链接快照 × 全量有效评价', '标准卖点按词表计（见 titleTerms / reviewTerms），比 insight_query 的单关键词口径更宽，数值可能略高'] }
 }
 
 /** 痛点与负面构成：观点抽取带否定窗口，附原文。 */
@@ -95,11 +95,12 @@ export function priceAudit() {
 }
 
 /** 按关键词取评论原文（用于证据包、反例）。 */
+const net = r => r.hits.filter(h => h.sent === 'neg').length - r.hits.filter(h => h.sent === 'pos').length
 export function reviewSamples({ terms = [], negOnly = false, negPoints = [], limit = 4, exclude = [] } = {}) {
   const hit = withHits().filter(r => r.valid && (!arr(terms).length || arr(terms).some(t => r.text.includes(t))) && !arr(exclude).some(t => r.text.includes(t)))
   const isNeg = r => arr(negPoints).length ? r.hits.some(h => h.sent === 'neg' && arr(negPoints).includes(h.point)) : r.hits.some(h => h.sent === 'neg')
   const pick = negOnly ? hit.filter(isNeg) : hit
   return { matched: hit.length, negative: hit.filter(isNeg).length,
-    items: [...new Map(pick.map(r => [r.text, r])).values()].sort((a, b) => Math.abs(a.text.length - 70) - Math.abs(b.text.length - 70)).slice(0, limit).map(r => ({ platform: r.plat, date: r.date, quote: r.text.slice(0, 140) })) }
+    items: [...new Map(pick.map(r => [r.text, r])).values()].sort((a, b) => (negOnly ? net(b) - net(a) : 0) || Math.abs(a.text.length - 70) - Math.abs(b.text.length - 70)).slice(0, limit).map(r => ({ platform: r.plat, date: r.date, quote: r.text.slice(0, 140) })) }
 }
 export const validReviewCount = () => withHits().filter(r => r.valid).length

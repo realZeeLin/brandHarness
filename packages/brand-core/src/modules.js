@@ -40,7 +40,7 @@ export function opportunityScore({ ids } = {}) {
 export function opportunityPack({ id = 'OP-001' } = {}) {
   const o = demo().opportunities.find(x => x.id === id)
   if (!o) throw new Error(`未知机会 ${id}，可选：${demo().opportunities.map(x => x.id).join(' / ')}`)
-  const score = opportunityScore({ ids: [id] }).opportunities[0]
+  const score = opportunityScore().opportunities.find(x => x.id === id)
   const neg = o.painTerms ? reviewSamples({ terms: o.painTerms, exclude: o.exclude, limit: 4 }) : reviewSamples({ negPoints: o.negPoints, negOnly: true, limit: 4, exclude: o.exclude || [] })
   const counter = reviewSamples({ terms: o.terms.map(t => '没有' + t).concat(o.terms.map(t => '无' + t)), limit: 2 })
   const sm = filterPosts({ keyword: o.terms }).posts.sort((a, b) => b.inter - a.inter).slice(0, 3).map(p => ({ platform: p.plat, date: p.date, quote: p.summary || p.title, promo: PROMO_RE.test(p.text) }))

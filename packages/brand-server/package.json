@@ -3,7 +3,15 @@
   "version": "0.1.0",
   "description": "品牌洞察智能体工作台：HTTP API（工具 / 智能体 SSE / 数据导入与流式推入 / 技能库）+ 静态工作台",
   "type": "module",
-  "bin": { "brand-server": "src/server.js" },
-  "dependencies": { "@brandharness/brand-core": "file:../brand-core" },
-  "license": "MIT"
+  "bin": {
+    "brand-server": "src/server.js"
+  },
+  "dependencies": {
+    "@brandharness/brand-core": "file:../brand-core"
+  },
+  "license": "MIT",
+  "exports": {
+    ".": "./src/server.js",
+    "./src/server.js": "./src/server.js"
+  }
 }

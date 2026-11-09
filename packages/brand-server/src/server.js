@@ -38,7 +38,7 @@ export function meta() {
   return {
     brand: core.datasetInfo().brand, modules: core.MODULES.map(m => ({ ...m, tools: core.TOOLS.filter(t => t.module === m.key).map(t => ({ name: t.name, title: t.title, readOnly: t.readOnly })) })),
     experts: core.experts(), scenes: core.scenes(), tasks: core.tasks(), skills: core.listSkills().map(({ path, ...s }) => s),
-    scenarios: core.SCENARIOS.map(({ re, ...s }) => s), data: core.dataSources(),
+    scenarios: core.SCENARIOS.map(({ re, ...s }) => ({ ...s, reSource: re.source })), data: core.dataSources(),
     mode: { online: !!process.env.DEEPSEEK_API_KEY, model: process.env.DEEPSEEK_MODEL || 'deepseek-chat' }
   }
 }
@@ -108,7 +108,7 @@ async function route(req, res) {
   res.end(await readFile(file))
 }
 
-export function start(port = Number(process.env.PORT) || 8787, host = process.env.HOST || '127.0.0.1') {
+export function start(port = process.env.PORT !== undefined && process.env.PORT !== '' ? Number(process.env.PORT) : 8787, host = process.env.HOST || '127.0.0.1') {
   const server = createServer((req, res) => route(req, res).catch(e => { if (!res.headersSent) json(res, e.code >= 400 && e.code < 600 ? e.code : 500, { error: e.message }); else res.end() }))
   return new Promise(r => server.listen(port, host, () => { r(server) }))
 }

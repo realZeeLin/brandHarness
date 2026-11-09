@@ -1,0 +1,44 @@
+{
+  "name": "dsh-plugin-brand-insight",
+  "version": "0.1.0",
+  "description": "DeepSeek Harness 组合包：把中粮品牌洞察平台九大模块注册为 dsh 工具，把专家技能说明注册为 dsh 技能，并注入品牌洞察工作守则",
+  "type": "module",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "cordis.mcp.patch.yml",
+    "README.md"
+  ],
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "brand-insight",
+    "mcp"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "engines": {
+    "dsh": ">=0.2.0-rc.1 <0.3.0",
+    "node": ">=24.9.0"
+  },
+  "dependencies": {
+    "@brandharness/brand-core": "file:../brand-core"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-tools": "*",
+    "@deepseek-ai/schemastery": "*"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/dsh-tools": {
+      "optional": true
+    },
+    "@deepseek-ai/schemastery": {
+      "optional": true
+    }
+  },
+  "license": "MIT"
+}

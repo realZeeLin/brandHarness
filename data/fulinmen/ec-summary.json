@@ -1,0 +1,1986 @@
+{
+ "kpi": [
+  {
+   "platform": "京东",
+   "links": 793,
+   "shops": 411,
+   "comments": 10454,
+   "valid_comments": 9959,
+   "zero_cmt_link_rate": 0.8474,
+   "price_median": 208.8,
+   "default_rate": 0.0474,
+   "valid_rate": 0.9526,
+   "img_rate": 0.6216,
+   "template_rate": 0.1489,
+   "median_len": 31,
+   "neg_rate": 0.0128,
+   "neg_count": 127,
+   "premium_link_share": 0.0971,
+   "premium_volume_share": 0.9182,
+   "b2b_title_rate": 0.3581,
+   "multi_pack_share": 0.3652,
+   "shops_total": 411,
+   "shops_zero_cmt": 403,
+   "shops_zero_share": 0.9805,
+   "offscope_shops": 180,
+   "offscope_links": 306,
+   "dup_titles": 39,
+   "dup_title_links": 160,
+   "dup_title_cmts": 157,
+   "tianrun_links": 453,
+   "flagship_count": 6,
+   "self_links": 35,
+   "self_cmt_share": 0.9169,
+   "over150": 390,
+   "under80": 21,
+   "win_start": "2020-06",
+   "win_end": "2026-11",
+   "collected": "2026-11-02",
+   "sales_links": 176,
+   "sales_disclosed": 752,
+   "sales_total": 183345352,
+   "sales_zero_links": 576,
+   "sales_cov": 0.9483,
+   "sales_median": 300.0,
+   "sales_top10_share": 0.6436,
+   "sales_wavg_ppl": 11.8,
+   "cmt_per_sales": 0.137,
+   "ppl_median": 19.01
+  },
+  {
+   "platform": "淘宝/天猫",
+   "links": 306,
+   "shops": 144,
+   "comments": 32870,
+   "valid_comments": 4746,
+   "zero_cmt_link_rate": 0.3922,
+   "price_median": 79.9,
+   "default_rate": 0.8556,
+   "valid_rate": 0.1444,
+   "img_rate": 0.0834,
+   "template_rate": 0.0636,
+   "median_len": 19,
+   "neg_rate": 0.0238,
+   "neg_count": 113,
+   "premium_link_share": 0.1438,
+   "premium_volume_share": 0.5097,
+   "b2b_title_rate": 0.2647,
+   "multi_pack_share": 0.0866,
+   "shops_total": 144,
+   "shops_zero_cmt": 97,
+   "shops_zero_share": 0.6736,
+   "offscope_shops": 46,
+   "offscope_links": 70,
+   "dup_titles": 10,
+   "dup_title_links": 36,
+   "dup_title_cmts": 22,
+   "tianrun_links": 0,
+   "flagship_count": 2,
+   "self_links": 9,
+   "self_cmt_share": 0.3761,
+   "over150": 51,
+   "under80": 16,
+   "win_start": "2024-10",
+   "win_end": "2026-11",
+   "collected": "2026-11-02",
+   "sales_links": 221,
+   "sales_disclosed": 306,
+   "sales_total": 6526332,
+   "sales_zero_links": 85,
+   "sales_cov": 1.0,
+   "sales_median": 100.0,
+   "sales_top10_share": 0.4597,
+   "sales_wavg_ppl": 14.63,
+   "cmt_per_sales": 0.009,
+   "ppl_median": 14.99
+  }
+ ],
+ "category": [
+  {
+   "platform": "京东",
+   "category": "花生油",
+   "links": 40,
+   "link_share": 0.0504,
+   "cmt_volume_share": 0.0945,
+   "comment_rows": 988
+  },
+  {
+   "platform": "京东",
+   "category": "葵花籽油",
+   "links": 6,
+   "link_share": 0.0076,
+   "cmt_volume_share": 0.0636,
+   "comment_rows": 665
+  },
+  {
+   "platform": "京东",
+   "category": "玉米油",
+   "links": 22,
+   "link_share": 0.0277,
+   "cmt_volume_share": 0.1119,
+   "comment_rows": 1170
+  },
+  {
+   "platform": "京东",
+   "category": "菜籽油",
+   "links": 48,
+   "link_share": 0.0605,
+   "cmt_volume_share": 0.1296,
+   "comment_rows": 1355
+  },
+  {
+   "platform": "京东",
+   "category": "大豆油",
+   "links": 664,
+   "link_share": 0.8373,
+   "cmt_volume_share": 0.6002,
+   "comment_rows": 6275
+  },
+  {
+   "platform": "京东",
+   "category": "其他油种",
+   "links": 10,
+   "link_share": 0.0126,
+   "cmt_volume_share": 0.0,
+   "comment_rows": 0
+  },
+  {
+   "platform": "淘宝/天猫",
+   "category": "花生油",
+   "links": 7,
+   "link_share": 0.0229,
+   "cmt_volume_share": 0.0512,
+   "comment_rows": 1684
+  },
+  {
+   "platform": "淘宝/天猫",
+   "category": "葵花籽油",
+   "links": 62,
+   "link_share": 0.2026,
+   "cmt_volume_share": 0.163,
+   "comment_rows": 5359
+  },
+  {
+   "platform": "淘宝/天猫",
+   "category": "玉米油",
+   "links": 20,
+   "link_share": 0.0654,
+   "cmt_volume_share": 0.0647,
+   "comment_rows": 2127
+  },
+  {
+   "platform": "淘宝/天猫",
+   "category": "菜籽油",
+   "links": 2,
+   "link_share": 0.0065,
+   "cmt_volume_share": 0.0001,
+   "comment_rows": 2
+  },
+  {
+   "platform": "淘宝/天猫",
+   "category": "大豆油",
+   "links": 213,
+   "link_share": 0.6961,
+   "cmt_volume_share": 0.7207,
+   "comment_rows": 23690
+  },
+  {
+   "platform": "淘宝/天猫",
+   "category": "其他油种",
+   "links": 2,
+   "link_share": 0.0065,
+   "cmt_volume_share": 0.0002,
+   "comment_rows": 8
+  }
+ ],
+ "pack": [
+  {
+   "platform": "京东",
+   "pack": "1桶",
+   "comment_share": 0.6348
+  },
+  {
+   "platform": "京东",
+   "pack": "2桶",
+   "comment_share": 0.1457
+  },
+  {
+   "platform": "京东",
+   "pack": "4桶(整箱)",
+   "comment_share": 0.1992
+  },
+  {
+   "platform": "京东",
+   "pack": "其他多桶",
+   "comment_share": 0.0204
+  },
+  {
+   "platform": "淘宝/天猫",
+   "pack": "1桶",
+   "comment_share": 0.9134
+  },
+  {
+   "platform": "淘宝/天猫",
+   "pack": "2桶",
+   "comment_share": 0.0589
+  },
+  {
+   "platform": "淘宝/天猫",
+   "pack": "4桶(整箱)",
+   "comment_share": 0.0274
+  },
+  {
+   "platform": "淘宝/天猫",
+   "pack": "其他多桶",
+   "comment_share": 0.0003
+  }
+ ],
+ "shop_type": [
+  {
+   "platform": "京东",
+   "shop_type": "平台自营",
+   "links": 35,
+   "shops": 2,
+   "link_share": 0.0441,
+   "cmt_share": 0.9169,
+   "sales_share": 0.8791,
+   "sales_total": 161174470,
+   "sales_disclosed": 35,
+   "zero_rate": 0.1143,
+   "n_valid": 5584,
+   "neg_rate": 0.0073
+  },
+  {
+   "platform": "京东",
+   "shop_type": "品牌旗舰店",
+   "links": 42,
+   "shops": 7,
+   "link_share": 0.053,
+   "cmt_share": 0.0014,
+   "sales_share": 0.0007,
+   "sales_total": 134951,
+   "sales_disclosed": 31,
+   "zero_rate": 0.4762,
+   "n_valid": 1572,
+   "neg_rate": 0.0261
+  },
+  {
+   "platform": "京东",
+   "shop_type": "授权专卖店",
+   "links": 31,
+   "shops": 5,
+   "link_share": 0.0391,
+   "cmt_share": 0.0006,
+   "sales_share": 0.0003,
+   "sales_total": 58340,
+   "sales_disclosed": 25,
+   "zero_rate": 0.4839,
+   "n_valid": 741,
+   "neg_rate": 0.0175
+  },
+  {
+   "platform": "京东",
+   "shop_type": "专营店",
+   "links": 68,
+   "shops": 17,
+   "link_share": 0.0858,
+   "cmt_share": 0.0006,
+   "sales_share": 0.0004,
+   "sales_total": 71632,
+   "sales_disclosed": 57,
+   "zero_rate": 0.5735,
+   "n_valid": 1131,
+   "neg_rate": 0.0256
+  },
+  {
+   "platform": "京东",
+   "shop_type": "个人/其他店铺",
+   "links": 617,
+   "shops": 381,
+   "link_share": 0.7781,
+   "cmt_share": 0.0806,
+   "sales_share": 0.1195,
+   "sales_total": 21905959,
+   "sales_disclosed": 604,
+   "zero_rate": 0.9627,
+   "n_valid": 931,
+   "neg_rate": 0.0032
+  },
+  {
+   "platform": "淘宝/天猫",
+   "shop_type": "平台自营",
+   "links": 9,
+   "shops": 1,
+   "link_share": 0.0294,
+   "cmt_share": 0.3761,
+   "sales_share": 0.1716,
+   "sales_total": 1120000,
+   "sales_disclosed": 9,
+   "zero_rate": 0.0,
+   "n_valid": 1661,
+   "neg_rate": 0.0108
+  },
+  {
+   "platform": "淘宝/天猫",
+   "shop_type": "品牌旗舰店",
+   "links": 35,
+   "shops": 12,
+   "link_share": 0.1144,
+   "cmt_share": 0.1336,
+   "sales_share": 0.0075,
+   "sales_total": 48905,
+   "sales_disclosed": 35,
+   "zero_rate": 0.3143,
+   "n_valid": 970,
+   "neg_rate": 0.034
+  },
+  {
+   "platform": "淘宝/天猫",
+   "shop_type": "授权专卖店",
+   "links": 31,
+   "shops": 6,
+   "link_share": 0.1013,
+   "cmt_share": 0.0892,
+   "sales_share": 0.005,
+   "sales_total": 32654,
+   "sales_disclosed": 31,
+   "zero_rate": 0.3226,
+   "n_valid": 731,
+   "neg_rate": 0.0287
+  },
+  {
+   "platform": "淘宝/天猫",
+   "shop_type": "专营店",
+   "links": 23,
+   "shops": 10,
+   "link_share": 0.0752,
+   "cmt_share": 0.0036,
+   "sales_share": 0.0004,
+   "sales_total": 2593,
+   "sales_disclosed": 23,
+   "zero_rate": 0.2609,
+   "n_valid": 46,
+   "neg_rate": 0.0217
+  },
+  {
+   "platform": "淘宝/天猫",
+   "shop_type": "企业店",
+   "links": 52,
+   "shops": 12,
+   "link_share": 0.1699,
+   "cmt_share": 0.1975,
+   "sales_share": 0.0073,
+   "sales_total": 47879,
+   "sales_disclosed": 52,
+   "zero_rate": 0.1731,
+   "n_valid": 138,
+   "neg_rate": 0.0362
+  },
+  {
+   "platform": "淘宝/天猫",
+   "shop_type": "个人/其他店铺",
+   "links": 156,
+   "shops": 103,
+   "link_share": 0.5098,
+   "cmt_share": 0.2,
+   "sales_share": 0.8082,
+   "sales_total": 5274301,
+   "sales_disclosed": 156,
+   "zero_rate": 0.5385,
+   "n_valid": 1200,
+   "neg_rate": 0.0292
+  }
+ ],
+ "sales": {
+  "by_platform": {
+   "京东": {
+    "links": 793,
+    "disclosed": 752,
+    "cov": 0.9483,
+    "total": 183345352,
+    "zero": 576,
+    "median": 300.0,
+    "top10_share": 0.6436,
+    "wavg_ppl": 11.8,
+    "cmt_per_sales": 0.137
+   },
+   "淘宝/天猫": {
+    "links": 306,
+    "disclosed": 306,
+    "cov": 1.0,
+    "total": 6526332,
+    "zero": 85,
+    "median": 100.0,
+    "top10_share": 0.4597,
+    "wavg_ppl": 14.63,
+    "cmt_per_sales": 0.009
+   }
+  },
+  "by_category": [
+   {
+    "links": 47,
+    "disclosed": 44,
+    "cov": 0.9362,
+    "total": 20090662,
+    "zero": 33,
+    "median": 10000.0,
+    "top10_share": 1.0,
+    "wavg_ppl": 16.99,
+    "cmt_per_sales": 0.449,
+    "category": "花生油",
+    "share": 0.1058
+   },
+   {
+    "links": 68,
+    "disclosed": 68,
+    "cov": 1.0,
+    "total": 6138070,
+    "zero": 27,
+    "median": 100.0,
+    "top10_share": 0.9993,
+    "wavg_ppl": 12.97,
+    "cmt_per_sales": 0.501,
+    "category": "葵花籽油",
+    "share": 0.0323
+   },
+   {
+    "links": 42,
+    "disclosed": 42,
+    "cov": 1.0,
+    "total": 28084485,
+    "zero": 21,
+    "median": 600.0,
+    "top10_share": 0.9999,
+    "wavg_ppl": 10.27,
+    "cmt_per_sales": 0.223,
+    "category": "玉米油",
+    "share": 0.1479
+   },
+   {
+    "links": 50,
+    "disclosed": 49,
+    "cov": 0.98,
+    "total": 35310309,
+    "zero": 36,
+    "median": 5000000.0,
+    "top10_share": 1.0,
+    "wavg_ppl": 14.0,
+    "cmt_per_sales": 0.041,
+    "category": "菜籽油",
+    "share": 0.186
+   },
+   {
+    "links": 877,
+    "disclosed": 841,
+    "cov": 0.959,
+    "total": 100247695,
+    "zero": 533,
+    "median": 100.0,
+    "top10_share": 0.9337,
+    "wavg_ppl": 10.63,
+    "cmt_per_sales": 0.053,
+    "category": "大豆油",
+    "share": 0.528
+   },
+   {
+    "links": 12,
+    "disclosed": 12,
+    "cov": 1.0,
+    "total": 163,
+    "zero": 10,
+    "median": 82.0,
+    "top10_share": 1.0,
+    "wavg_ppl": 22.11,
+    "cmt_per_sales": 0.049,
+    "category": "其他油种",
+    "share": 0.0
+   }
+  ],
+  "by_shop_type": [
+   {
+    "links": 44,
+    "disclosed": 44,
+    "cov": 1.0,
+    "total": 162294470,
+    "zero": 0,
+    "median": 2000000.0,
+    "top10_share": 0.6346,
+    "wavg_ppl": 12.18,
+    "cmt_per_sales": 0.142,
+    "shop_type": "平台自营",
+    "share": 0.8548
+   },
+   {
+    "links": 77,
+    "disclosed": 66,
+    "cov": 0.8571,
+    "total": 183856,
+    "zero": 12,
+    "median": 750.0,
+    "top10_share": 0.6309,
+    "wavg_ppl": 14.37,
+    "cmt_per_sales": 0.23,
+    "shop_type": "品牌旗舰店",
+    "share": 0.001
+   },
+   {
+    "links": 62,
+    "disclosed": 56,
+    "cov": 0.9032,
+    "total": 90994,
+    "zero": 13,
+    "median": 93.0,
+    "top10_share": 0.9341,
+    "wavg_ppl": 16.06,
+    "cmt_per_sales": 0.232,
+    "shop_type": "授权专卖店",
+    "share": 0.0005
+   },
+   {
+    "links": 91,
+    "disclosed": 80,
+    "cov": 0.8791,
+    "total": 74225,
+    "zero": 15,
+    "median": 100.0,
+    "top10_share": 0.7949,
+    "wavg_ppl": 11.95,
+    "cmt_per_sales": 0.194,
+    "shop_type": "专营店",
+    "share": 0.0004
+   },
+   {
+    "links": 52,
+    "disclosed": 52,
+    "cov": 1.0,
+    "total": 47879,
+    "zero": 5,
+    "median": 100.0,
+    "top10_share": 0.8751,
+    "wavg_ppl": 16.16,
+    "cmt_per_sales": 0.255,
+    "shop_type": "企业店",
+    "share": 0.0003
+   },
+   {
+    "links": 773,
+    "disclosed": 760,
+    "cov": 0.9832,
+    "total": 27180260,
+    "zero": 616,
+    "median": 19.0,
+    "top10_share": 0.8609,
+    "wavg_ppl": 10.36,
+    "cmt_per_sales": 0.075,
+    "shop_type": "个人/其他店铺",
+    "share": 0.1432
+   }
+  ],
+  "by_brand": [
+   {
+    "links": 1099,
+    "disclosed": 1058,
+    "cov": 0.9627,
+    "total": 189871684,
+    "zero": 661,
+    "median": 100.0,
+    "top10_share": 0.6215,
+    "wavg_ppl": 11.91,
+    "cmt_per_sales": 0.133,
+    "brand": "福临门",
+    "share": 1.0
+   },
+   {
+    "links": 122,
+    "disclosed": 121,
+    "cov": 0.9918,
+    "total": 88252988,
+    "zero": 87,
+    "median": 30000.0,
+    "top10_share": 0.8045,
+    "wavg_ppl": 12.69,
+    "cmt_per_sales": 0.223,
+    "brand": "金阙谣",
+    "share": 0.4648
+   },
+   {
+    "links": 13,
+    "disclosed": 11,
+    "cov": 0.8462,
+    "total": 4631,
+    "zero": 4,
+    "median": 9.0,
+    "top10_share": 1.0,
+    "wavg_ppl": 18.0,
+    "cmt_per_sales": 0.476,
+    "brand": "家香味",
+    "share": 0.0
+   },
+   {
+    "links": 1,
+    "disclosed": 1,
+    "cov": 1.0,
+    "total": 300000,
+    "zero": 0,
+    "median": 300000.0,
+    "top10_share": 1.0,
+    "wavg_ppl": 16.38,
+    "cmt_per_sales": 0.0,
+    "brand": "营养家",
+    "share": 0.0016
+   },
+   {
+    "links": 2,
+    "disclosed": 2,
+    "cov": 1.0,
+    "total": 0,
+    "zero": 2,
+    "median": null,
+    "top10_share": 0.0,
+    "wavg_ppl": null,
+    "cmt_per_sales": null,
+    "brand": "五湖",
+    "share": 0.0
+   }
+  ],
+  "top_links": [
+   {
+    "platform": "京东",
+    "title": "福临门金阙谣精选一级大豆油5L食用油中粮出品少油烟",
+    "shop": "福临门食用油京东自营旗舰店",
+    "shop_type": "平台自营",
+    "category": "大豆油",
+    "sales": 20000000,
+    "cmt": 1000000,
+    "price": 49.9,
+    "ppl": 9.98
+   },
+   {
+    "platform": "京东",
+    "title": "福临门食用油精选一级大豆油5L*4植物油（整箱装）商用少油烟黄金透亮",
+    "shop": "",
+    "shop_type": "个人/其他店铺",
+    "category": "大豆油",
+    "sales": 20000000,
+    "cmt": 1000000,
+    "price": 184.9,
+    "ppl": 9.25
+   },
+   {
+    "platform": "京东",
+    "title": "福临门食用油 一级大豆油5L*2植物油 中粮出品",
+    "shop": "福临门食用油京东自营旗舰店",
+    "shop_type": "平台自营",
+    "category": "大豆油",
+    "sales": 20000000,
+    "cmt": 5000,
+    "price": 99.8,
+    "ppl": 9.98
+   },
+   {
+    "platform": "京东",
+    "title": "福临门食用油一级大豆油5升植物油中粮出品家庭烹饪少油烟浸出",
+    "shop": "福临门食用油京东自营旗舰店",
+    "shop_type": "平台自营",
+    "category": "大豆油",
+    "sales": 20000000,
+    "cmt": 1000000,
+    "price": 54.9,
+    "ppl": 10.98
+   },
+   {
+    "platform": "京东",
+    "title": "福临门 福临门 金阙谣食用油 非转基因压榨玉米油6.18L×4桶",
+    "shop": "福临门食用油京东自营旗舰店",
+    "shop_type": "平台自营",
+    "category": "玉米油",
+    "sales": 7000000,
+    "cmt": 200000,
+    "price": 235.0,
+    "ppl": 9.51
+   },
+   {
+    "platform": "京东",
+    "title": "福临门 金阙谣 非转基因压榨玉米油6.18L+软香稻 苏北大米 10kg",
+    "shop": "福临门食用油京东自营旗舰店",
+    "shop_type": "平台自营",
+    "category": "玉米油",
+    "sales": 7000000,
+    "cmt": 0,
+    "price": 135.8,
+    "ppl": null
+   },
+   {
+    "platform": "京东",
+    "title": "福临门 福临门 食用油 非转基因压榨玉米油6.18L×2桶",
+    "shop": "福临门食用油京东自营旗舰店",
+    "shop_type": "平台自营",
+    "category": "玉米油",
+    "sales": 7000000,
+    "cmt": 50000,
+    "price": 139.0,
+    "ppl": 11.25
+   },
+   {
+    "platform": "京东",
+    "title": "福临门金阙谣 非转基因压榨一级玉米油6.18L 食用油",
+    "shop": "福临门食用油京东自营旗舰店",
+    "shop_type": "平台自营",
+    "category": "玉米油",
+    "sales": 7000000,
+    "cmt": 3000000,
+    "price": 61.7,
+    "ppl": 9.98
+   },
+   {
+    "platform": "京东",
+    "title": "福临门金阙谣 浓香压榨一级 花生油6.18L 【保真花生油】食用油 中粮",
+    "shop": "福临门食用油京东自营旗舰店",
+    "shop_type": "平台自营",
+    "category": "花生油",
+    "sales": 5000000,
+    "cmt": 3000000,
+    "price": 89.9,
+    "ppl": 14.55
+   },
+   {
+    "platform": "京东",
+    "title": "福临门 金阙谣 食用油 浓香压榨一级 花生油6.18L （月黑专用）",
+    "shop": "福临门食用油京东自营旗舰店",
+    "shop_type": "平台自营",
+    "category": "花生油",
+    "sales": 5000000,
+    "cmt": 3000000,
+    "price": 129.9,
+    "ppl": 21.02
+   },
+   {
+    "platform": "京东",
+    "title": "福临门【东哥同款】金阙谣食用油物理压榨非转基因精选菜籽油5L家庭",
+    "shop": "福临门食用油京东自营旗舰店",
+    "shop_type": "平台自营",
+    "category": "菜籽油",
+    "sales": 5000000,
+    "cmt": 200000,
+    "price": 57.9,
+    "ppl": 11.58
+   },
+   {
+    "platform": "京东",
+    "title": "福临门 金阙谣 食用油 非转基因精选菜籽油5L 中粮出品×4桶",
+    "shop": "福临门食用油京东自营旗舰店",
+    "shop_type": "平台自营",
+    "category": "菜籽油",
+    "sales": 5000000,
+    "cmt": 20000,
+    "price": 399.6,
+    "ppl": 19.98
+   },
+   {
+    "platform": "京东",
+    "title": "福临门 【东哥同款】金阙谣 物理压榨非转基因精选菜籽油5L×2桶",
+    "shop": "福临门食用油京东自营旗舰店",
+    "shop_type": "平台自营",
+    "category": "菜籽油",
+    "sales": 5000000,
+    "cmt": 20000,
+    "price": 119.9,
+    "ppl": 11.99
+   },
+   {
+    "platform": "京东",
+    "title": "福临门 食用油 浓香压榨一级 花生油6.18L 中粮出品×4桶",
+    "shop": "福临门食用油京东自营旗舰店",
+    "shop_type": "平台自营",
+    "category": "花生油",
+    "sales": 5000000,
+    "cmt": 500,
+    "price": 399.9,
+    "ppl": 16.18
+   },
+   {
+    "platform": "京东",
+    "title": "福临门 金阙谣非转基因精选菜籽油5L+雪国稻香 五常大米 5kg",
+    "shop": "福临门食用油京东自营旗舰店",
+    "shop_type": "平台自营",
+    "category": "菜籽油",
+    "sales": 5000000,
+    "cmt": 0,
+    "price": 159.8,
+    "ppl": null
+   },
+   {
+    "platform": "京东",
+    "title": "福临门金阙谣物理压榨非转基因精选菜籽油食用油5L*4",
+    "shop": "福临门食用油京东自营旗舰店",
+    "shop_type": "平台自营",
+    "category": "菜籽油",
+    "sales": 5000000,
+    "cmt": 20000,
+    "price": 239.0,
+    "ppl": 11.95
+   },
+   {
+    "platform": "京东",
+    "title": "福临门&海底捞 金阙谣 压榨非转基因精选菜籽油5L+猪油400g",
+    "shop": "福临门食用油京东自营旗舰店",
+    "shop_type": "平台自营",
+    "category": "菜籽油",
+    "sales": 5000000,
+    "cmt": 91,
+    "price": 127.8,
+    "ppl": null
+   },
+   {
+    "platform": "京东",
+    "title": "福临门 金阙谣 食用油 浓香压榨一级 花生油6.18L *2 中粮出品",
+    "shop": "福临门食用油京东自营旗舰店",
+    "shop_type": "平台自营",
+    "category": "花生油",
+    "sales": 5000000,
+    "cmt": 20000,
+    "price": 199.9,
+    "ppl": 16.17
+   },
+   {
+    "platform": "京东",
+    "title": "福临门食用油 非转基因低芥酸纯正菜籽油5L【保真菜籽油】中粮出",
+    "shop": "福临门食用油京东自营旗舰店",
+    "shop_type": "平台自营",
+    "category": "菜籽油",
+    "sales": 5000000,
+    "cmt": 1000000,
+    "price": 72.9,
+    "ppl": 14.58
+   },
+   {
+    "platform": "京东",
+    "title": "福临门食用油 非转基因一级大豆油5L*2植物油",
+    "shop": "福临门食用油京东自营旗舰店",
+    "shop_type": "平台自营",
+    "category": "大豆油",
+    "sales": 4000000,
+    "cmt": 5000,
+    "price": 124.3,
+    "ppl": 12.43
+   }
+  ],
+  "all": {
+   "links": 1099,
+   "disclosed": 1058,
+   "cov": 0.9627,
+   "total": 189871684,
+   "zero": 661,
+   "median": 100.0,
+   "top10_share": 0.6215,
+   "wavg_ppl": 11.91,
+   "cmt_per_sales": 0.133
+  }
+ },
+ "bench": {
+  "花生油": 16.18,
+  "葵花籽油": 16.17,
+  "玉米油": 11.25,
+  "菜籽油": 12.48,
+  "大豆油": 12.18
+ },
+ "price_band": [
+  {
+   "group": "平台自营",
+   "band": "<80% 疑似破价/错配",
+   "n": 2,
+   "share": 0.0488
+  },
+  {
+   "group": "平台自营",
+   "band": "80-95%",
+   "n": 11,
+   "share": 0.2683
+  },
+  {
+   "group": "平台自营",
+   "band": "95-105% 基准",
+   "n": 13,
+   "share": 0.3171
+  },
+  {
+   "group": "平台自营",
+   "band": "105-150%",
+   "n": 14,
+   "share": 0.3415
+  },
+  {
+   "group": "平台自营",
+   "band": ">150% 虚高",
+   "n": 1,
+   "share": 0.0244
+  },
+  {
+   "group": "品牌官方/授权",
+   "band": "<80% 疑似破价/错配",
+   "n": 2,
+   "share": 0.0159
+  },
+  {
+   "group": "品牌官方/授权",
+   "band": "80-95%",
+   "n": 18,
+   "share": 0.1429
+  },
+  {
+   "group": "品牌官方/授权",
+   "band": "95-105% 基准",
+   "n": 24,
+   "share": 0.1905
+  },
+  {
+   "group": "品牌官方/授权",
+   "band": "105-150%",
+   "n": 53,
+   "share": 0.4206
+  },
+  {
+   "group": "品牌官方/授权",
+   "band": ">150% 虚高",
+   "n": 29,
+   "share": 0.2302
+  },
+  {
+   "group": "其他第三方",
+   "band": "<80% 疑似破价/错配",
+   "n": 33,
+   "share": 0.0393
+  },
+  {
+   "group": "其他第三方",
+   "band": "80-95%",
+   "n": 57,
+   "share": 0.0679
+  },
+  {
+   "group": "其他第三方",
+   "band": "95-105% 基准",
+   "n": 73,
+   "share": 0.087
+  },
+  {
+   "group": "其他第三方",
+   "band": "105-150%",
+   "n": 265,
+   "share": 0.3159
+  },
+  {
+   "group": "其他第三方",
+   "band": ">150% 虚高",
+   "n": 411,
+   "share": 0.4899
+  }
+ ],
+ "band_by_platform": {
+  "京东": {
+   "<80% 疑似破价/错配": 21,
+   "80-95%": 48,
+   "95-105% 基准": 64,
+   "105-150%": 198,
+   ">150% 虚高": 390
+  },
+  "淘宝/天猫": {
+   "<80% 疑似破价/错配": 16,
+   "80-95%": 38,
+   "95-105% 基准": 46,
+   "105-150%": 134,
+   ">150% 虚高": 51
+  }
+ },
+ "price_spec": [
+  {
+   "platform": "京东",
+   "spec": "大豆油 5L×1",
+   "self": 57.4,
+   "official": 69.9,
+   "third": 101.0,
+   "n_third": 239,
+   "multiple": 1.76
+  },
+  {
+   "platform": "京东",
+   "spec": "菜籽油 5L×1",
+   "self": 64.9,
+   "official": 69.9,
+   "third": 120.8,
+   "n_third": 19,
+   "multiple": 1.86
+  },
+  {
+   "platform": "京东",
+   "spec": "花生油 6.18L×1",
+   "self": 119.9,
+   "official": null,
+   "third": 369.8,
+   "n_third": 10,
+   "multiple": 3.08
+  },
+  {
+   "platform": "京东",
+   "spec": "玉米油 6.18L×1",
+   "self": 70.3,
+   "official": null,
+   "third": 118.2,
+   "n_third": 9,
+   "multiple": 1.68
+  },
+  {
+   "platform": "淘宝/天猫",
+   "spec": "大豆油 5L×1",
+   "self": 64.8,
+   "official": 76.0,
+   "third": 69.9,
+   "n_third": 104,
+   "multiple": 1.08
+  },
+  {
+   "platform": "淘宝/天猫",
+   "spec": "葵花籽油 5.43L×1",
+   "self": 119.9,
+   "official": 89.9,
+   "third": 83.3,
+   "n_third": 8,
+   "multiple": 0.69
+  }
+ ],
+ "box": {
+  "花生油": {
+   "京东": [
+    16.17,
+    30.82,
+    34.38,
+    45.96,
+    73.56
+   ]
+  },
+  "葵花籽油": {
+   "淘宝/天猫": [
+    14.34,
+    16.15,
+    18.91,
+    24.81,
+    30.24
+   ]
+  },
+  "玉米油": {
+   "京东": [
+    9.98,
+    13.33,
+    19.12,
+    22.49,
+    26.08
+   ],
+   "淘宝/天猫": [
+    13.83,
+    14.51,
+    16.48,
+    18.15,
+    19.83
+   ]
+  },
+  "菜籽油": {
+   "京东": [
+    12.19,
+    17.13,
+    23.25,
+    24.79,
+    44.09
+   ]
+  },
+  "大豆油": {
+   "京东": [
+    10.73,
+    13.8,
+    18.75,
+    23.23,
+    51.32
+   ],
+   "淘宝/天猫": [
+    9.49,
+    11.78,
+    13.98,
+    15.58,
+    21.8
+   ]
+  }
+ },
+ "hi": [
+  {
+   "platform": "京东",
+   "shop": "拾光良品932店",
+   "shop_type": "个人/其他店铺",
+   "category": "大豆油",
+   "title": "福临门 天润五谷甄选一级大豆油5升桶装食用油家用好油新款油 福临门甄选一级大豆油【保证】 4桶-5升",
+   "price": 470.2,
+   "total_L": 5.0,
+   "price_per_L": 94.04,
+   "price_ratio": 7.72,
+   "cmt_cnt": 0
+  },
+  {
+   "platform": "京东",
+   "shop": "食味轩零食店",
+   "shop_type": "个人/其他店铺",
+   "category": "大豆油",
+   "title": "福临门 天润五谷AE一级大豆油5L2桶中粮出品家庭优选 5L/桶【共发4桶】",
+   "price": 452.2,
+   "total_L": 5.0,
+   "price_per_L": 90.44,
+   "price_ratio": 7.43,
+   "cmt_cnt": 0
+  },
+  {
+   "platform": "京东",
+   "shop": "醇味小坊店",
+   "shop_type": "个人/其他店铺",
+   "category": "大豆油",
+   "title": "福临门 天润五谷中粮福临门一级大豆油5L*1*2*4桶食用油健康量贩装实惠zb 5L*4",
+   "price": 448.56,
+   "total_L": 5.0,
+   "price_per_L": 89.71,
+   "price_ratio": 7.37,
+   "cmt_cnt": 0
+  },
+  {
+   "platform": "京东",
+   "shop": "云起小食店",
+   "shop_type": "个人/其他店铺",
+   "category": "大豆油",
+   "title": "福临门 天润五谷一级大豆油5L*1/4桶整箱装食用油色拉油精选原料家用炒菜 福临门非基因改造大豆油5L*4桶装",
+   "price": 395.9,
+   "total_L": 5.0,
+   "price_per_L": 79.18,
+   "price_ratio": 6.5,
+   "cmt_cnt": 0
+  },
+  {
+   "platform": "京东",
+   "shop": "拾光良品932店",
+   "shop_type": "个人/其他店铺",
+   "category": "大豆油",
+   "title": "福临门 天润五谷甄选一级大豆油5升桶装食用油家用好油新款油 福临门甄选一级大豆油【保证】 3桶-5升",
+   "price": 358.2,
+   "total_L": 5.0,
+   "price_per_L": 71.64,
+   "price_ratio": 5.88,
+   "cmt_cnt": 0
+  },
+  {
+   "platform": "京东",
+   "shop": "福临门旗舰店",
+   "shop_type": "品牌旗舰店",
+   "category": "大豆油",
+   "title": "福临门非转基因一级大豆油1.5L 福临门非转基因一级大豆油5L*1瓶",
+   "price": 106.9,
+   "total_L": 1.5,
+   "price_per_L": 71.27,
+   "price_ratio": 5.85,
+   "cmt_cnt": 0
+  }
+ ],
+ "lo": [
+  {
+   "platform": "京东",
+   "shop": "心名轩休闲零食店",
+   "shop_type": "个人/其他店铺",
+   "category": "大豆油",
+   "title": "福临门福临一级门大豆油5LAE营养食用油家庭油10升 出榀 2桶mL 2桶*5L共10L",
+   "price": 151.0,
+   "total_L": 50.0,
+   "price_per_L": 3.02,
+   "price_ratio": 0.25,
+   "cmt_cnt": 0
+  },
+  {
+   "platform": "淘宝/天猫",
+   "shop": "特价米面油批发",
+   "shop_type": "个人/其他店铺",
+   "category": "大豆油",
+   "title": "5L*4瓶福临门非基因改造一级大豆油",
+   "price": 66.0,
+   "total_L": 20.0,
+   "price_per_L": 3.3,
+   "price_ratio": 0.27,
+   "cmt_cnt": 2
+  },
+  {
+   "platform": "京东",
+   "shop": "彭柒唔零食星球店",
+   "shop_type": "个人/其他店铺",
+   "category": "大豆油",
+   "title": "中粮福临门AE一级大豆油5L桶整箱植物油餐饮食堂家用炒菜食用油 5L1桶",
+   "price": 71.4,
+   "total_L": 20.0,
+   "price_per_L": 3.57,
+   "price_ratio": 0.29,
+   "cmt_cnt": 0
+  },
+  {
+   "platform": "京东",
+   "shop": "吉睿雾特产食品店",
+   "shop_type": "个人/其他店铺",
+   "category": "大豆油",
+   "title": "中粮福临门大豆油5L桶整箱植物油家用炒菜食用油 5L1桶",
+   "price": 71.4,
+   "total_L": 20.0,
+   "price_per_L": 3.57,
+   "price_ratio": 0.29,
+   "cmt_cnt": 0
+  }
+ ],
+ "monthly": [
+  {
+   "month": "2025-09",
+   "platform": "京东",
+   "n": 83
+  },
+  {
+   "month": "2025-09",
+   "platform": "淘宝/天猫",
+   "n": 985
+  },
+  {
+   "month": "2025-10",
+   "platform": "京东",
+   "n": 140
+  },
+  {
+   "month": "2025-10",
+   "platform": "淘宝/天猫",
+   "n": 1095
+  },
+  {
+   "month": "2025-11",
+   "platform": "京东",
+   "n": 214
+  },
+  {
+   "month": "2025-11",
+   "platform": "淘宝/天猫",
+   "n": 2149
+  },
+  {
+   "month": "2025-12",
+   "platform": "京东",
+   "n": 287
+  },
+  {
+   "month": "2025-12",
+   "platform": "淘宝/天猫",
+   "n": 1316
+  },
+  {
+   "month": "2026-01",
+   "platform": "京东",
+   "n": 266
+  },
+  {
+   "month": "2026-01",
+   "platform": "淘宝/天猫",
+   "n": 857
+  },
+  {
+   "month": "2026-02",
+   "platform": "京东",
+   "n": 182
+  },
+  {
+   "month": "2026-02",
+   "platform": "淘宝/天猫",
+   "n": 649
+  },
+  {
+   "month": "2026-03",
+   "platform": "京东",
+   "n": 192
+  },
+  {
+   "month": "2026-03",
+   "platform": "淘宝/天猫",
+   "n": 345
+  },
+  {
+   "month": "2026-04",
+   "platform": "京东",
+   "n": 143
+  },
+  {
+   "month": "2026-04",
+   "platform": "淘宝/天猫",
+   "n": 579
+  },
+  {
+   "month": "2026-05",
+   "platform": "京东",
+   "n": 275
+  },
+  {
+   "month": "2026-05",
+   "platform": "淘宝/天猫",
+   "n": 2070
+  },
+  {
+   "month": "2026-06",
+   "platform": "京东",
+   "n": 535
+  },
+  {
+   "month": "2026-06",
+   "platform": "淘宝/天猫",
+   "n": 2487
+  },
+  {
+   "month": "2026-07",
+   "platform": "京东",
+   "n": 204
+  },
+  {
+   "month": "2026-07",
+   "platform": "淘宝/天猫",
+   "n": 3012
+  },
+  {
+   "month": "2026-08",
+   "platform": "京东",
+   "n": 210
+  },
+  {
+   "month": "2026-08",
+   "platform": "淘宝/天猫",
+   "n": 3222
+  },
+  {
+   "month": "2026-09",
+   "platform": "京东",
+   "n": 777
+  },
+  {
+   "month": "2026-09",
+   "platform": "淘宝/天猫",
+   "n": 5115
+  },
+  {
+   "month": "2026-10",
+   "platform": "京东",
+   "n": 3748
+  },
+  {
+   "month": "2026-10",
+   "platform": "淘宝/天猫",
+   "n": 5767
+  },
+  {
+   "month": "2026-11",
+   "platform": "京东",
+   "n": 826
+  },
+  {
+   "month": "2026-11",
+   "platform": "淘宝/天猫",
+   "n": 265
+  }
+ ],
+ "topics": [
+  {
+   "platform": "京东",
+   "topic": "价格/性价比",
+   "share": 0.4718
+  },
+  {
+   "platform": "京东",
+   "topic": "物流配送",
+   "share": 0.3281
+  },
+  {
+   "platform": "京东",
+   "topic": "香味口感",
+   "share": 0.3236
+  },
+  {
+   "platform": "京东",
+   "topic": "包装",
+   "share": 0.2198
+  },
+  {
+   "platform": "京东",
+   "topic": "回购忠诚",
+   "share": 0.1979
+  },
+  {
+   "platform": "京东",
+   "topic": "品牌信赖",
+   "share": 0.3306
+  },
+  {
+   "platform": "京东",
+   "topic": "烹饪表现/油烟",
+   "share": 0.2424
+  },
+  {
+   "platform": "京东",
+   "topic": "健康/工艺",
+   "share": 0.1859
+  },
+  {
+   "platform": "京东",
+   "topic": "日期新鲜",
+   "share": 0.1111
+  },
+  {
+   "platform": "京东",
+   "topic": "团购/单位场景",
+   "share": 0.0321
+  },
+  {
+   "platform": "淘宝/天猫",
+   "topic": "价格/性价比",
+   "share": 0.3146
+  },
+  {
+   "platform": "淘宝/天猫",
+   "topic": "物流配送",
+   "share": 0.2174
+  },
+  {
+   "platform": "淘宝/天猫",
+   "topic": "香味口感",
+   "share": 0.2345
+  },
+  {
+   "platform": "淘宝/天猫",
+   "topic": "包装",
+   "share": 0.2103
+  },
+  {
+   "platform": "淘宝/天猫",
+   "topic": "回购忠诚",
+   "share": 0.1148
+  },
+  {
+   "platform": "淘宝/天猫",
+   "topic": "品牌信赖",
+   "share": 0.1886
+  },
+  {
+   "platform": "淘宝/天猫",
+   "topic": "烹饪表现/油烟",
+   "share": 0.1106
+  },
+  {
+   "platform": "淘宝/天猫",
+   "topic": "健康/工艺",
+   "share": 0.0845
+  },
+  {
+   "platform": "淘宝/天猫",
+   "topic": "日期新鲜",
+   "share": 0.1184
+  },
+  {
+   "platform": "淘宝/天猫",
+   "topic": "团购/单位场景",
+   "share": 0.0059
+  }
+ ],
+ "claims": [
+  {
+   "claim": "中粮/央企背书",
+   "title_rate": 0.4058,
+   "comment_rate": 0.0451,
+   "gap": -0.3607
+  },
+  {
+   "claim": "非转基因",
+   "title_rate": 0.2175,
+   "comment_rate": 0.0828,
+   "gap": -0.1346
+  },
+  {
+   "claim": "压榨工艺",
+   "title_rate": 0.1501,
+   "comment_rate": 0.0301,
+   "gap": -0.1201
+  },
+  {
+   "claim": "0反式脂肪",
+   "title_rate": 0.0109,
+   "comment_rate": 0.0035,
+   "gap": -0.0075
+  },
+  {
+   "claim": "一级品质",
+   "title_rate": 0.8344,
+   "comment_rate": 0.0352,
+   "gap": -0.7992
+  },
+  {
+   "claim": "日期新鲜",
+   "title_rate": 0.0227,
+   "comment_rate": 0.1102,
+   "gap": 0.0874
+  },
+  {
+   "claim": "少油烟",
+   "title_rate": 0.0073,
+   "comment_rate": 0.0917,
+   "gap": 0.0844
+  }
+ ],
+ "pain": [
+  {
+   "pain": "漏油/破损",
+   "jd": 47,
+   "tm": 50,
+   "total": 97
+  },
+  {
+   "pain": "价格/保价",
+   "jd": 40,
+   "tm": 39,
+   "total": 79
+  },
+  {
+   "pain": "包装设计",
+   "jd": 21,
+   "tm": 21,
+   "total": 42
+  },
+  {
+   "pain": "物流/服务",
+   "jd": 11,
+   "tm": 6,
+   "total": 17
+  },
+  {
+   "pain": "品质/风味",
+   "jd": 12,
+   "tm": 4,
+   "total": 16
+  },
+  {
+   "pain": "真伪/授权疑虑",
+   "jd": 7,
+   "tm": 5,
+   "total": 12
+  },
+  {
+   "pain": "日期不新鲜",
+   "jd": 4,
+   "tm": 3,
+   "total": 7
+  },
+  {
+   "pain": "宣传/标识不符",
+   "jd": 0,
+   "tm": 2,
+   "total": 2
+  }
+ ],
+ "neg_total": 272,
+ "competitors": [
+  {
+   "brand": "金龙鱼",
+   "mentions": 60
+  },
+  {
+   "brand": "鲁花",
+   "mentions": 23
+  },
+  {
+   "brand": "多力",
+   "mentions": 6
+  },
+  {
+   "brand": "胡姬花",
+   "mentions": 3
+  },
+  {
+   "brand": "长寿花",
+   "mentions": 1
+  },
+  {
+   "brand": "西王",
+   "mentions": 1
+  },
+  {
+   "brand": "九三",
+   "mentions": 1
+  },
+  {
+   "brand": "道道全",
+   "mentions": 0
+  }
+ ],
+ "neg": [
+  {
+   "cid": "tm-304786857512",
+   "platform": "淘宝/天猫",
+   "shop_type": "品牌旗舰店",
+   "category": "大豆油",
+   "pain": "漏油/破损、包装设计",
+   "date": "2024-11-18",
+   "text": "收到货后包装破损 有个大窟窿，瓶身上边一层土。本打算拒收，他们的智能客服打来电话，问情况，我包装坏了。随后就人工客服核实，说给赔付五块钱，让我一到两天查收红包。结果一直没有，问了一下，说没这回事，让我出示凭证，凭证早扔了。不在乎几块钱，就是"
+  },
+  {
+   "cid": "jd-758339325739",
+   "platform": "京东",
+   "shop_type": "品牌旗舰店",
+   "category": "大豆油",
+   "pain": "漏油/破损、包装设计",
+   "date": "2024-08-10",
+   "text": "包装太差，快递比较野蛮，收到都有点漏了，商家非要拍漏点，包装上不能证明，服务太差了，大家购买谨慎些！"
+  },
+  {
+   "cid": "jd-949599809162",
+   "platform": "京东",
+   "shop_type": "授权专卖店",
+   "category": "大豆油",
+   "pain": "物流/服务",
+   "date": "2026-08-31",
+   "text": "我河北廊坊市收货地址！商家给我改成了北京收货地址还有电话号码，诈骗消费者！压根就没收到快递包裹！！！第一次用京东买东西！让商家协助追回快递！态度极差！推脱不给处理！这种黑心商家大家预防！就是欺负岁数大的老人诈骗老人！你家都没老人吗？平台也不"
+  },
+  {
+   "cid": "jd-388664858987",
+   "platform": "京东",
+   "shop_type": "品牌旗舰店",
+   "category": "大豆油",
+   "pain": "包装设计",
+   "date": "2025-05-20",
+   "text": "包装差，然后油的颜色超级淡，不咋地，还不如一般店铺买的。左边油是今天买的，右边是我在~百亿补贴买的，差距明显。我们公司大约10天用4桶油，所以我经常买，这次618活动，满200优惠20元，以为旗舰店油品肯定没问题，居然让人太失望了"
+  },
+  {
+   "cid": "tm-465553014421",
+   "platform": "淘宝/天猫",
+   "shop_type": "企业店",
+   "category": "大豆油",
+   "pain": "漏油/破损、物流/服务",
+   "date": "2026-09-19",
+   "text": "客服敷衍，快递破损严重，要求退货，7天无理由退货，商家不同意。拖延处理。"
+  },
+  {
+   "cid": "tm-98732046583",
+   "platform": "淘宝/天猫",
+   "shop_type": "授权专卖店",
+   "category": "大豆油",
+   "pain": "漏油/破损、真伪/授权疑虑",
+   "date": "2025-12-27",
+   "text": "发过来的产品外包装全部破损的，我问一下客服是不是真货或者被调包了？就直接不解释也不验证真伪就让我退货，什么态度😡😡😡😡😡那要这样的话你们你们就是在卖假货是不是也默认了😡😡😡😡😡卖假货卖假货"
+  },
+  {
+   "cid": "jd-531341652539",
+   "platform": "京东",
+   "shop_type": "专营店",
+   "category": "大豆油",
+   "pain": "包装设计、真伪/授权疑虑",
+   "date": "2025-08-23",
+   "text": "不是正品福临门厂家出的，是委托方。包装简陋，瓶子质量薄，和以前买的不一样。价格还贵。本以为在京东买，能有正品，送货上门，有点失望！"
+  },
+  {
+   "cid": "jd-162708913640",
+   "platform": "京东",
+   "shop_type": "授权专卖店",
+   "category": "大豆油",
+   "pain": "漏油/破损",
+   "date": "2026-02-13",
+   "text": "不是福临门官方旗舰店的！！！注意有问题售后太差了，年底了，等快递等了一星期，快递到了漏了，告诉我可以拒收，要是平时我肯定拒收了，过年回来等着用，这个退了你再补发吧，又说快递停了得年后补发？你们就买吧，有问题了就退吧，没半个月都吃不上豆油！"
+  },
+  {
+   "cid": "tm-172077576156",
+   "platform": "淘宝/天猫",
+   "shop_type": "个人/其他店铺",
+   "category": "大豆油",
+   "pain": "漏油/破损",
+   "date": "2026-06-18",
+   "text": "买了1箱，到货二次包装，漏了一桶其他三桶都是油渍。 退货找客服找不到商家客服，只找到了官方客服，最后找了88VIP客服才解决。（期间，一箱205漏了一桶本来官方客服让退一桶的价钱，商家拒绝了，最后找了88客服最后退货退款）"
+  }
+ ],
+ "matrix": {
+  "京东": {
+   "links": 793,
+   "shops": 411,
+   "zero": 0.8474,
+   "official": 0.9182,
+   "over150": 0.4918,
+   "valid": 0.9526,
+   "neg": 0.0128,
+   "comments": 10454,
+   "win": [
+    "2020-06",
+    "2026-11"
+   ],
+   "img": 0.6216,
+   "tmpl": 0.1489,
+   "default": 0.0474,
+   "median_len": 31
+  },
+  "淘宝/天猫": {
+   "links": 306,
+   "shops": 144,
+   "zero": 0.3922,
+   "official": 0.5097,
+   "over150": 0.1667,
+   "valid": 0.1444,
+   "neg": 0.0238,
+   "comments": 32870,
+   "win": [
+    "2024-10",
+    "2026-11"
+   ],
+   "img": 0.0834,
+   "tmpl": 0.0636,
+   "default": 0.8556,
+   "median_len": 19
+  }
+ },
+ "governance": {
+  "京东": {
+   "shops_total": 411,
+   "shops_zero_cmt": 403,
+   "offscope_shops": 180,
+   "offscope_links": 306,
+   "dup_titles": 39,
+   "dup_title_links": 160,
+   "dup_title_cmts": 157,
+   "flagship_names": [
+    "福临门官方旗舰店",
+    "福临门旗舰店",
+    "福临门粮油官方旗舰店",
+    "福临门粮油调味旗舰店",
+    "福临门食品旗舰店",
+    "福临门食用油旗舰店"
+   ],
+   "tianrun_prefix_links": 453
+  },
+  "淘宝/天猫": {
+   "shops_total": 144,
+   "shops_zero_cmt": 97,
+   "offscope_shops": 46,
+   "offscope_links": 70,
+   "dup_titles": 10,
+   "dup_title_links": 36,
+   "dup_title_cmts": 22,
+   "flagship_names": [
+    "福临门旗舰店",
+    "福临门食品旗舰店"
+   ],
+   "tianrun_prefix_links": 0
+  }
+ },
+ "top_shops": {
+  "京东": [
+   {
+    "shop": "福临门食用油京东自营旗舰店",
+    "type": "平台自营",
+    "links": 33,
+    "share": 0.9169
+   },
+   {
+    "shop": "（店铺名缺失）",
+    "type": "个人/其他店铺",
+    "links": 4,
+    "share": 0.0805
+   },
+   {
+    "shop": "福临门食品旗舰店",
+    "type": "品牌旗舰店",
+    "links": 9,
+    "share": 0.0007
+   },
+   {
+    "shop": "福临门官方旗舰店",
+    "type": "品牌旗舰店",
+    "links": 3,
+    "share": 0.0005
+   },
+   {
+    "shop": "福临门诚丰专卖店",
+    "type": "授权专卖店",
+    "links": 15,
+    "share": 0.0003
+   },
+   {
+    "shop": "好口福米面调味专营店",
+    "type": "专营店",
+    "links": 12,
+    "share": 0.0003
+   },
+   {
+    "shop": "福临门食安专卖店",
+    "type": "授权专卖店",
+    "links": 4,
+    "share": 0.0003
+   },
+   {
+    "shop": "多多拼食品专营店",
+    "type": "专营店",
+    "links": 9,
+    "share": 0.0002
+   },
+   {
+    "shop": "禾盛食用油专营店",
+    "type": "专营店",
+    "links": 16,
+    "share": 0.0001
+   },
+   {
+    "shop": "福临门食用油旗舰店",
+    "type": "品牌旗舰店",
+    "links": 8,
+    "share": 0.0001
+   },
+   {
+    "shop": "福临门佳裕专卖店",
+    "type": "授权专卖店",
+    "links": 10,
+    "share": 0.0
+   },
+   {
+    "shop": "福临门旗舰店",
+    "type": "品牌旗舰店",
+    "links": 8,
+    "share": 0.0
+   }
+  ],
+  "淘宝/天猫": [
+   {
+    "shop": "天猫超市",
+    "type": "平台自营",
+    "links": 9,
+    "share": 0.3761
+   },
+   {
+    "shop": "福临门旗舰店",
+    "type": "品牌旗舰店",
+    "links": 19,
+    "share": 0.1282
+   },
+   {
+    "shop": "福临门官方企业店",
+    "type": "企业店",
+    "links": 15,
+    "share": 0.124
+   },
+   {
+    "shop": "淘宝农场",
+    "type": "个人/其他店铺",
+    "links": 19,
+    "share": 0.1002
+   },
+   {
+    "shop": "福临门中恒瑞源专卖店",
+    "type": "授权专卖店",
+    "links": 15,
+    "share": 0.0877
+   },
+   {
+    "shop": "鑫旺粮油企业店",
+    "type": "企业店",
+    "links": 9,
+    "share": 0.0493
+   },
+   {
+    "shop": "中粮食品汇商城企业店",
+    "type": "企业店",
+    "links": 11,
+    "share": 0.019
+   },
+   {
+    "shop": "京粮达行",
+    "type": "个人/其他店铺",
+    "links": 3,
+    "share": 0.0177
+   },
+   {
+    "shop": "鑫蕊进口食品店",
+    "type": "个人/其他店铺",
+    "links": 3,
+    "share": 0.0162
+   },
+   {
+    "shop": "百姓粮油小店",
+    "type": "个人/其他店铺",
+    "links": 8,
+    "share": 0.006
+   },
+   {
+    "shop": "中粮食品旗舰店",
+    "type": "品牌旗舰店",
+    "links": 4,
+    "share": 0.0053
+   },
+   {
+    "shop": "强盛昌荣食品店企业店",
+    "type": "企业店",
+    "links": 2,
+    "share": 0.0033
+   }
+  ]
+ },
+ "brand_mix": [
+  {
+   "platform": "京东",
+   "brand": "金阙谣",
+   "links": 102,
+   "link_share": 0.1286,
+   "cmt_share": 0.3842
+  },
+  {
+   "platform": "京东",
+   "brand": "福临门",
+   "links": 793,
+   "link_share": 1.0,
+   "cmt_share": 1.0
+  },
+  {
+   "platform": "京东",
+   "brand": "家香味",
+   "links": 12,
+   "link_share": 0.0151,
+   "cmt_share": 0.0222
+  },
+  {
+   "platform": "京东",
+   "brand": "五湖",
+   "links": 2,
+   "link_share": 0.0025,
+   "cmt_share": 0.0
+  },
+  {
+   "platform": "淘宝/天猫",
+   "brand": "金阙谣",
+   "links": 20,
+   "link_share": 0.0654,
+   "cmt_share": 0.0907
+  },
+  {
+   "platform": "淘宝/天猫",
+   "brand": "福临门",
+   "links": 305,
+   "link_share": 0.9967,
+   "cmt_share": 0.9998
+  },
+  {
+   "platform": "淘宝/天猫",
+   "brand": "家香味",
+   "links": 1,
+   "link_share": 0.0033,
+   "cmt_share": 0.0002
+  },
+  {
+   "platform": "淘宝/天猫",
+   "brand": "营养家",
+   "links": 1,
+   "link_share": 0.0033,
+   "cmt_share": 0.0009
+  }
+ ],
+ "dq_flagged": 33,
+ "items_n": 1006,
+ "comments_n": 43324,
+ "collected": "2026-11-02"
+}

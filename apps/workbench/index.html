@@ -3,64 +3,68 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>品牌智能体工作台 · brandHarness</title>
+<title>中粮营销 AI 助手 · 品牌智能体工作台</title>
 <link rel="stylesheet" href="app.css">
 </head>
 <body>
-<div class="app">
-  <header class="top">
-    <div class="logo"><i>品</i><div>品牌智能体工作台<small>brandHarness · 基于 DeepSeek Harness</small></div></div>
-    <div class="crumb"><span>中粮集团</span>›<span>食用油</span>›<span class="fl">福临门</span></div>
-    <div class="sp"></div>
-    <span class="pill" id="baseInfo">DeepSeek Harness 插件 · 工具 — · 技能 —</span>
-    <div class="seg" id="modeSeg" title="离线：规划器 + 真实工具；在线：DeepSeek 函数调用（需服务端配置密钥）">
-      <button data-mode="offline" class="on">离线演示</button><button data-mode="online">在线 DeepSeek</button>
+<!-- 三栏：左 = 入口（待办、技能、数据、专家工位、工作区）；中 = 对话；右 = 交付物 / 证据 / 看板。 -->
+<div class="app" id="app">
+  <aside class="left" id="left" aria-label="入口">
+    <div class="brand"><span class="mark">粮</span><div><b>中粮营销 AI 助手</b><span>基于 DeepSeek Harness 构建</span></div></div>
+    <button class="newtask" id="newTask"></button>
+    <div class="leftscroll">
+      <div id="navs"></div>
+      <div class="sec"><span>专家工位</span><span>模块 = 工具</span></div>
+      <div id="modules"></div>
+      <div class="sec"><span>工作区</span></div>
+      <div class="wsname" id="wsname"></div>
+      <div id="tasks"></div>
     </div>
-    <a class="lnk" href="concept.html" target="_blank">设想设计 ↗</a>
-    <span class="pill">品牌经理（演示账号）</span>
-  </header>
-  <div class="main">
-    <aside class="left" id="left">
-      <button class="newtask" id="newTask">＋ 新建任务</button>
-      <div class="sec"><h4>能力模块 <span>页面 = 工具</span></h4><div id="modules"></div></div>
-      <div class="sec"><h4>专家智能体 <span>1 + 6</span></h4><div id="experts"></div></div>
-      <div class="sec"><h4>技能库 <span id="skillCount"></span></h4><div id="skills"></div></div>
-      <div class="sec"><h4>任务</h4><div id="tasks"></div></div>
-    </aside>
-    <section class="center">
-      <div id="offlineBar" class="offline" hidden>未连接到 brand-server：正在播放预录的真实会话（数字与工具返回均来自算法层录制）。运行 <code>npm start</code> 可体验实时调用。</div>
-      <div class="chead">
-        <h2 id="title">新任务</h2>
-        <span class="tag pri" id="expertTag">总助手</span><span class="tag gold" id="skillTag" hidden></span>
-        <div class="sp"></div><span class="small" id="stat"></span>
-      </div>
-      <div class="thread" id="thread"><div class="wrap" id="wrap"></div></div>
-      <div class="composer" style="position:relative">
-        <div class="wrap">
-          <div class="chips" id="chips"></div>
-          <div class="inbox"><textarea id="input" rows="1" placeholder="问一个品牌业务问题，或输入 @ 指派专家、/ 调用技能……"></textarea><button class="send" id="send" title="发送">↑</button></div>
-          <div class="hint"><span>@ 指派专家</span><span>/ 调用技能</span><span># 指定模块</span><span class="sp"></span><span>平台与智能体只对内运行 · 写操作须人确认</span></div>
+    <div class="userbar"><span class="ava">品</span><div><b>品牌经理</b><span>福临门品牌部 · 演示账号</span></div></div>
+  </aside>
+
+  <main class="center">
+    <div class="head">
+      <div class="row1">
+        <h1 id="title">新任务</h1><span class="tid" id="tid"></span>
+        <div class="rt">
+          <span class="mode" id="modeInfo"></span>
+          <a class="textbtn" href="concept.html" target="_blank" rel="noopener">设想设计</a>
+          <button class="iconbtn" id="toggleRight" title="收起 / 展开右栏" aria-label="收起或展开右栏"></button>
         </div>
-        <div class="mentions" id="mentions"></div>
       </div>
-    </section>
-    <aside class="right">
-      <nav class="tabs" id="tabs">
-        <button data-tab="deliver" class="on">交付物<em id="dCount">0</em></button>
-        <button data-tab="trace">证据链<em id="tCount">0</em></button>
-        <button data-tab="lab">工具台</button>
-        <button data-tab="skill">技能</button>
-        <button data-tab="data">数据</button>
-      </nav>
-      <div class="pane on" id="pane-deliver"></div>
-      <div class="pane" id="pane-trace"></div>
-      <div class="pane" id="pane-lab"></div>
-      <div class="pane" id="pane-skill"></div>
-      <div class="pane" id="pane-data"></div>
-    </aside>
-  </div>
+      <div class="rail" id="rail" hidden></div>
+    </div>
+    <div class="scroll" id="thread"><div class="col" id="wrap"></div></div>
+    <div class="composer">
+      <div class="chips" id="chips"></div>
+      <div class="cbox">
+        <textarea id="input" rows="1" placeholder="发消息或交办任务，/ 调用技能，@ 专家，# 模块" aria-label="发消息或交办任务"></textarea>
+        <div class="ctools">
+          <span class="pill" id="cscope" title="当前工作范围"></span>
+          <span class="pill" id="cperm" title="读操作自动执行；签发、写入技能、数据入库需要你确认"></span>
+          <button class="pill" id="cmode" style="margin-left:auto" title="离线：规划器 + 真实工具；在线：DeepSeek 函数调用（服务端需配置密钥）"></button>
+          <button class="send" id="send" aria-label="发送"></button>
+        </div>
+      </div>
+      <div class="cstat" id="cstat"></div>
+      <div class="pop" id="mentions"></div>
+    </div>
+  </main>
+
+  <aside class="right" id="right" aria-label="交付物">
+    <nav class="rhd" id="tabs">
+      <button class="rtab on" data-tab="deliver">交付物<span class="n" id="dCount">0</span></button>
+      <button class="rtab" data-tab="trace">证据<span class="n" id="tCount">0</span></button>
+      <button class="rtab" data-tab="panel" id="panelTab">看板</button>
+      <span class="rt"><button class="iconbtn" id="wideRight" title="放大 / 还原" aria-label="放大或还原右栏"></button><button class="iconbtn" id="closeRight" title="收起" aria-label="收起右栏"></button></span>
+    </nav>
+    <div class="pane on" id="pane-deliver"></div>
+    <div class="pane" id="pane-trace"></div>
+    <div class="pane" id="pane-panel"></div>
+  </aside>
 </div>
-<div class="toast" id="toast"></div>
+<div class="toast" id="toast" role="status"></div>
 <script src="app.js"></script>
 </body>
 </html>

@@ -1,0 +1,9 @@
+{
+  "name": "@brandharness/brand-cli",
+  "version": "0.1.0",
+  "description": "品牌洞察命令行：调用工具、与智能体对话、导入数据、管理技能",
+  "type": "module",
+  "bin": { "brand": "src/cli.js" },
+  "dependencies": { "@brandharness/brand-core": "file:../brand-core" },
+  "license": "MIT"
+}

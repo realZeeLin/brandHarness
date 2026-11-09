@@ -1,0 +1,13 @@
+# 备选接入方式：不装组合包，只把 brand-mcp 作为 MCP 服务器挂到 DSH（通用 MCP 客户端）。
+# 用法：dsh web --patch /绝对路径/packages/dsh-plugin-brand-insight/cordis.mcp.patch.yml
+# 工具在模型侧显示为 mcp__brand__<tool>。
+- insert:
+    - id: brand-insight-mcp
+      name: '@deepseek-ai/dsh-mcp-client'
+      config:
+        serverName: brand
+        transport: stdio
+        command: node
+        args:
+          - !!js "process.env.BRANDHARNESS_HOME ? process.env.BRANDHARNESS_HOME + '/packages/brand-mcp/src/server.js' : 'packages/brand-mcp/src/server.js'"
+        cwd: !!js "process.env.BRANDHARNESS_HOME || process.cwd()"

@@ -1,0 +1,19 @@
+{
+  "name": "brandharness",
+  "version": "0.1.0",
+  "private": true,
+  "description": "中粮品牌洞察智能体工作台：基于 DeepSeek Harness 插件模式，把洞察平台九大模块做成 API / MCP / CLI 工具与专家技能",
+  "type": "module",
+  "workspaces": ["packages/*"],
+  "scripts": {
+    "start": "node packages/brand-server/src/server.js",
+    "mcp": "node packages/brand-mcp/src/server.js",
+    "brand": "node packages/brand-cli/src/cli.js",
+    "test": "node --test tests/unit/*.test.mjs",
+    "test:e2e": "node --test tests/e2e/*.test.mjs",
+    "test:dsh": "node tests/dsh/verify-plugin.mjs",
+    "build:data": "node scripts/build-data.mjs"
+  },
+  "engines": { "node": ">=20" },
+  "license": "MIT"
+}

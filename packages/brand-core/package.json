@@ -1,0 +1,10 @@
+{
+  "name": "@brandharness/brand-core",
+  "version": "0.1.0",
+  "description": "中粮品牌洞察算法层：数据访问、九大模块工具、口径门禁、结论溯源与签发留痕（API / MCP / CLI / DeepSeek Harness 插件共用的单一真源）",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": { ".": "./src/index.js" },
+  "license": "MIT",
+  "engines": { "node": ">=20" }
+}

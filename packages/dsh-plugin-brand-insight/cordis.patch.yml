@@ -1,0 +1,11 @@
+# dsh-plugin-brand-insight 组合包层：在 dsh-base 之后插入三行插件。
+#   brand-insight         —— 注册 27 个品牌洞察工具（ctx.tools）
+#   brand-insight-skills  —— 注册技能说明（ctx.skills，可选）
+#   brand-insight-prompt  —— 注入品牌洞察工作守则段落（ctx.systemPrompt，可选）
+# 配置项可在 profile 自己的 cordis.patch.yml 中按 id 覆盖。
+- insert:
+    - id: brand-insight
+      name: dsh-plugin-brand-insight
+      config:
+        expert: lead
+        exposeWriteTools: true

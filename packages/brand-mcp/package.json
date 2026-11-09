@@ -1,0 +1,9 @@
+{
+  "name": "@brandharness/brand-mcp",
+  "version": "0.1.0",
+  "description": "品牌洞察 MCP 服务（stdio）：九大模块工具 + 技能说明资源 + 演示场景提示词，可接入 DeepSeek Harness / 任意 MCP 客户端",
+  "type": "module",
+  "bin": { "brand-mcp": "src/server.js" },
+  "dependencies": { "@brandharness/brand-core": "file:../brand-core" },
+  "license": "MIT"
+}

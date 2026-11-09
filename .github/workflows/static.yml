@@ -31,13 +31,19 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Assemble site (workbench demo at site root)
+        run: |
+          mkdir -p _site
+          cp -r apps/workbench/. _site/
+          mkdir -p _site/docs && cp -r docs/images _site/docs/
+          touch _site/.nojekyll
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire repository
-          path: '.'
+          # 只发布工作台（录制回放模式）与设想设计页，不发布数据与源码目录
+          path: '_site'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>设想设计 · 品牌智能体工作台</title>
+<style>
+:root{--ink:#0f172a;--ink2:#334155;--mut:#64748b;--line:#e5e9f0;--pri:#1f5eff;--pri2:#e8efff;--gold:#b7791f;--gold2:#fdf3e1;--ok:#0f9d6b;--okbg:#e7f7f0;--warn:#c27c0e;--warnbg:#fff6e5;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Noto Sans CJK SC",sans-serif}
+body{margin:0;background:#f4f6fa;color:var(--ink);line-height:1.6;font-size:15px}
+.w{max-width:1120px;margin:0 auto;padding:0 28px}
+header{background:linear-gradient(135deg,#0f2a6b,#1f5eff);color:#fff;padding:54px 0 46px}
+header h1{font-size:32px;margin:6px 0 10px}header p{max-width:760px;opacity:.9;margin:0}
+header .k{font-size:13px;opacity:.75;letter-spacing:.08em}
+header a{color:#fff}
+section{padding:36px 0 8px}
+h2{font-size:22px;margin:0 0 4px}.lead{color:var(--mut);margin:0 0 18px}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 20px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:14px}.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.card h3{margin:0 0 6px;font-size:16px}.card p{margin:0;color:var(--ink2);font-size:14px}
+.tag{display:inline-block;font-size:12px;padding:1px 8px;border-radius:6px;background:var(--pri2);color:var(--pri);margin:0 4px 4px 0}
+.tag.g{background:var(--gold2);color:var(--gold)}.tag.o{background:var(--okbg);color:var(--ok)}.tag.w{background:var(--warnbg);color:var(--warn)}
+.loop{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;align-items:stretch}
+.loop .s{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px;position:relative;font-size:13px}
+.loop .s b{display:block;font-size:14px;margin-bottom:4px;color:var(--pri)}
+.loop .s:not(:last-child):after{content:"→";position:absolute;right:-9px;top:40%;color:var(--mut);font-weight:700}
+.layers .l{display:grid;grid-template-columns:170px 1fr 150px;gap:14px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin-bottom:8px}
+.layers .l b{font-size:14px}.layers .l .own{font-size:12px;color:var(--mut);text-align:right}
+.layers .l.hi{border-color:#c9d8ff;background:#f7f9ff}.layers .l.gd{border-color:#f0d9b0;background:#fffaf0}
+.chips span{display:inline-block;border:1px solid var(--line);background:#fff;border-radius:7px;padding:3px 9px;margin:3px 4px 3px 0;font-size:13px}
+.wire{display:grid;grid-template-columns:200px 1fr 260px;gap:0;border:1px solid #cbd5e1;border-radius:12px;overflow:hidden;background:#fff;min-height:380px}
+.wire>div{padding:14px;font-size:13px}.wire .lc{background:#f8fafc;border-right:1px solid var(--line)}.wire .rc{background:#f8fafc;border-left:1px solid var(--line)}
+.wire h4{margin:0 0 8px;font-size:12px;color:var(--mut);letter-spacing:.06em}
+.wire .blk{border:1px dashed #b8c6e6;border-radius:8px;padding:8px;margin-bottom:8px;background:#fff}
+.wire .blk.p{border-style:solid;border-color:#c9d8ff;background:var(--pri2)}
+.wire .blk.y{border-style:solid;border-color:#f3dcae;background:var(--warnbg)}
+.ann{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:12px}
+table{width:100%;border-collapse:collapse;font-size:14px;background:#fff;border-radius:10px;overflow:hidden;border:1px solid var(--line)}
+th,td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}th{background:#f8fafc;font-weight:600;color:var(--ink2)}
+.flow{counter-reset:f}.flow li{list-style:none;position:relative;padding:8px 0 8px 40px;border-left:2px solid var(--line);margin-left:14px}
+.flow li:before{counter-increment:f;content:counter(f);position:absolute;left:-14px;top:8px;width:26px;height:26px;border-radius:50%;background:var(--pri);color:#fff;display:grid;place-items:center;font-size:13px;font-weight:700}
+.flow li b{color:var(--ink)}.flow li span{color:var(--mut);font-size:13px}
+footer{padding:40px 0;color:var(--mut);font-size:13px}
+code{background:#eef2f6;padding:0 5px;border-radius:4px;font-size:13px}
+@media(max-width:900px){.g2,.g3,.g4,.ann{grid-template-columns:1fr}.loop{grid-template-columns:1fr 1fr}.wire{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><div class="w">
+  <div class="k">设想设计 · DESIGN CONCEPT</div>
+  <h1>品牌智能体工作台：让智能体真正赋能品牌员工</h1>
+  <p>把「消费者智能洞察平台」演示包从「看板 + 回放对话」改造为以 <b>DeepSeek Harness</b> 为运行底座的智能体工作形态：九大模块成为左栏入口，同时以 API / MCP / CLI 形态被上层 harness 调用；中间是专家与员工的工作对话区，右侧沉淀报告、结论卡、证据与技能。福临门为演示案例。</p>
+  <p style="margin-top:14px"><a href="index.html">→ 打开工作台</a>　·　<a href="https://github.com/deepseek-ai/deepseek-harness" target="_blank">DeepSeek Harness（MIT）</a></p>
+</div></header>
+
+<main class="w">
+<section>
+  <h2>一、设计目标</h2>
+  <p class="lead">不是再多一个看板，而是把品牌工作的「问题 → 证据 → 判断 → 交付 → 沉淀」变成员工与智能体一起跑的流程。</p>
+  <div class="g4">
+    <div class="card"><h3>智能体友好</h3><p>每个页面能力都是一个有 JSON Schema 的工具，结构化返回、报错可读、读写分开，智能体可直接编排。</p></div>
+    <div class="card"><h3>员工可用、可改</h3><p>业务人员用对话交办；分析师在工具台复现、在技能页改文字；数据同事用接口推数——同一套资产。</p></div>
+    <div class="card"><h3>可信</h3><p>数字逐一溯源到工具字段，样本不足就拒答，写操作必须人确认，所有动作留痕。</p></div>
+    <div class="card"><h3>可迁移</h3><p>技能是文字、工具是标准接口；底座可换（DeepSeek Harness / 企业智能体 / 自有入口），资产归中粮。</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>二、智能体设计模式：总控编排 + 技能驱动的专家执行 + 闸门 + 回写</h2>
+  <p class="lead">综合采用业界成熟的几种模式，并按品牌业务的「可审计」要求加了两道闸门。</p>
+  <div class="loop">
+    <div class="s"><b>① 路由</b>总助手判断问题属于 8 个业务场景中的哪一个，指派专家（Router）</div>
+    <div class="s"><b>② 加载技能</b>专家读取技能说明（SOP），按步骤列出执行计划（Plan）</div>
+    <div class="s"><b>③ 调工具</b>调用九大模块工具，取数、取原文、算指标（Tool Use / ReAct）</div>
+    <div class="s"><b>④ 校验</b>结论卡每个数字重放工具核对；不达门槛拒答（Verifier / Guardrail）</div>
+    <div class="s"><b>⑤ 交付</b>结论卡、周报、证据包进入右栏，附证据链（Artifacts）</div>
+    <div class="s"><b>⑥ 人审</b>签发、技能修订、数据入库必须人确认（Human-in-the-loop）</div>
+    <div class="s"><b>⑦ 回写</b>结论入洞察库；做法沉淀为技能，下一轮更准（Memory / Skill Learning）</div>
+  </div>
+  <div class="g3" style="margin-top:14px">
+    <div class="card"><h3>多专家协作（Orchestrator–Workers）</h3><p>年度报告这类复合任务由总助手拆成 6 类决策，分派洞察分析师、产品机会官、品牌追踪官、活动复盘官、GEO 优化官，再由商情简报员汇编。</p></div>
+    <div class="card"><h3>技能即 SOP（Skills as Text）</h3><p>技能是带 frontmatter 的 Markdown（与 DeepSeek Harness 的 SKILL.md 兼容）：何时使用、可用工具、步骤、约束、输出。业务能读、能审、能改，修订留版本。</p></div>
+    <div class="card"><h3>数据可流入（Ingest → Gate → Recompute）</h3><p>所有数据集都开放批量导入与流式推入接口，入库前过四道筛，入库后算法层缓存失效，下一次工具调用即用上新数据。</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>三、总体架构：五层，运行层可替换，资产层与底座归中粮</h2>
+  <p class="lead">与《建设方案》五层架构一致；本仓库实现了运行层适配、资产层与底座层的可运行版本。</p>
+  <div class="layers">
+    <div class="l"><b>应用与入口</b><div class="chips"><span>品牌智能体工作台（Web）</span><span>DeepSeek Harness Web / TUI / Headless</span><span>CLI <code>brand</code></span><span>中粮E+（规划）</span><span>定时报告</span></div><div class="own">只面向内部账号</div></div>
+    <div class="l hi"><b>智能体运行层</b><div class="chips"><span><b>DeepSeek Harness</b>：agent loop、模型路由、会话留痕、权限门禁、技能目录</span><span>离线规划器（无密钥演示）</span><span>DeepSeek API 函数调用</span></div><div class="own">可替换 · 兼容主流底座</div></div>
+    <div class="l gd"><b>智能体资产层</b><div class="chips"><span>技能库 8 项（SKILL.md）</span><span>27 个工具（JSON Schema）</span><span>九大模块 + 数据接入</span><span>dsh 插件 / MCP / API / CLI 四种表面</span></div><div class="own">中粮自有</div></div>
+    <div class="l gd"><b>语义与数据底座</b><div class="chips"><span>指标口径字典 KSPEC</span><span>口碑标签 V1.1（8 类 44 项）</span><span>品牌事实库</span><span>证据库（社媒 / 电商 / AI 答案）</span><span>批量导入 · 流式推入 · 四道筛</span></div><div class="own">中粮自有</div></div>
+    <div class="l"><b>基础设施</b><div class="chips"><span>集团内网 IaaS</span><span>私有化大模型 / 云端 token 模型</span><span>DMZ 采集区</span><span>信创环境</span></div><div class="own">集团提供</div></div>
+  </div>
+</section>
+
+<section>
+  <h2>四、界面设想：左入口 · 中对话 · 右交付</h2>
+  <p class="lead">原九大模块不再是孤立页面，而是左栏入口；点开即看到「这个页面 = 这些工具」，可直接试运行或交给智能体。</p>
+  <div class="wire">
+    <div class="lc"><h4>左栏 · 能力与资产</h4>
+      <div class="blk p">＋ 新建任务</div>
+      <div class="blk"><b>能力模块</b>（页面 = 工具）<br>综合态势 · 社媒聆听 · 品牌追踪 · 电商分析 · 产品机会 · 营销活动 · GEO · AI 助手 · 数据接入 · 系统管理</div>
+      <div class="blk"><b>专家智能体</b> 1 + 6<br>在线状态 · 上线批次</div>
+      <div class="blk"><b>技能库</b> 名称 · 版本</div>
+      <div class="blk"><b>任务</b> T-2411 待签发 …</div>
+    </div>
+    <div><h4>中栏 · 专家工作对话</h4>
+      <div class="blk">员工：福临门主图要不要继续加码「非转基因」？</div>
+      <div class="blk p">总助手 → <b>洞察分析师</b> 接手 · 加载技能「卖点错位诊断 v1.3」</div>
+      <div class="blk">执行计划 6 步（逐步打勾）</div>
+      <div class="blk"><code>MCP</code> insight_query 完成 0.5s ▸ 参数 / 返回摘要</div>
+      <div class="blk">原文证据（标注促销话术）</div>
+      <div class="blk p">结论卡 T-2411 · 数字溯源 4/4 · 强度 中</div>
+      <div class="blk y">⏸ 签发闸门：审核人 [　　] 〔确认签发〕</div>
+      <div class="blk">输入框：@专家 · /技能 · #模块 · 建议追问</div>
+    </div>
+    <div class="rc"><h4>右栏 · 交付与证据</h4>
+      <div class="blk p"><b>交付物</b> 结论卡 / 周报 / 证据包 / 纠偏素材 / 技能草稿 → 导出、签发、回写</div>
+      <div class="blk"><b>证据链</b> 每次工具调用的参数与完整返回，一键复现为 CLI / HTTP / MCP</div>
+      <div class="blk"><b>工具台</b> 按模块选工具、填参数、运行</div>
+      <div class="blk"><b>技能</b> 阅读、修订、版本记录</div>
+      <div class="blk"><b>数据</b> 数据源状态 · 粘贴导入 · 接口说明</div>
+    </div>
+  </div>
+  <div class="ann">
+    <div class="card"><h3>左栏：入口即能力</h3><p>模块旁的数字是工具数；悬停看到工具名。点专家把任务直接指派给他，点技能打开技能文字，点任务回放该任务。</p></div>
+    <div class="card"><h3>中栏：过程透明</h3><p>谁接手、用了哪个技能、计划几步、每步调了什么工具、返回了什么，全部可见；关键动作停在闸门等人决定。</p></div>
+    <div class="card"><h3>右栏：结果可带走</h3><p>交付物可导出 Markdown、签发留痕；证据链可复现；技能草稿确认后进入技能库，成为部门资产。</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>五、福临门演示案例</h2>
+  <p class="lead">数据：社媒 2,855 条有效讨论（福临门 2,791 条，2026-10-19→11-01），电商 1,099 条链接 / 43,324 条评论（有效文字评价 14,658 条）。全部数字由算法层实时计算。</p>
+  <table>
+    <tr><th>任务</th><th>专家 · 技能</th><th>看点</th></tr>
+    <tr><td>T-2411 主图是否加码「非转基因」</td><td>洞察分析师 · 卖点错位诊断</td><td>标题 21.7% vs 有效评价 7.4%，错位 14.3pt；493 条社媒命中多为促销话术；结论卡 4/4 溯源；签发闸门</td></tr>
+    <tr><td>花生油 vs 玉米油</td><td>洞察分析师</td><td>社媒 940 vs 319（2.9 倍），电商有效评价 647 vs 645 持平——差距在传播面</td></tr>
+    <tr><td>福临门 vs 金龙鱼</td><td>品牌追踪官 · 竞品对比护栏</td><td>金龙鱼仅 16 条，<b>主动拒答</b>，并给出补数路径</td></tr>
+    <tr><td>第 46 周商情周报</td><td>商情简报员 · 食用油商情周报</td><td>按技能取数起草五个栏目，待分析师审核；审核意见可回写技能</td></tr>
+    <tr><td>立项证据包</td><td>产品机会官 · 立项证据包</td><td>机会评分可解释；包装负面 301 条附原文与反例</td></tr>
+    <tr><td>AI 答案纠偏</td><td>GEO 优化官 · AI 答案纠偏</td><td>证据未补齐的事实<b>不起草</b>；素材须品牌部审定</td></tr>
+    <tr><td>2027 年度报告</td><td>总助手 · 5 位专家协作</td><td>多专家分章起草，数据缺口写「未知」</td></tr>
+    <tr><td>数据接入 / 沉淀为技能</td><td>总助手</td><td>预检四道筛；把一次分析沉淀成 SKILL.md</td></tr>
+  </table>
+</section>
+
+<section>
+  <h2>六、三种运行形态，同一套资产</h2>
+  <div class="g3">
+    <div class="card"><span class="tag o">零配置</span><h3>离线演示</h3><p><code>npm start</code>。规划器按技能步骤真实调用工具，模板组织语言；适合汇报与培训。也可静态托管（预录回放）。</p></div>
+    <div class="card"><span class="tag">需 DeepSeek 密钥</span><h3>在线模型</h3><p>设置 <code>DEEPSEEK_API_KEY</code>，工作台切到「在线 DeepSeek」，由模型自行决定调用顺序与参数，工具与守则不变。</p></div>
+    <div class="card"><span class="tag g">生产形态</span><h3>DeepSeek Harness 插件</h3><p><code>dsh plugin add …/dsh-plugin-brand-insight</code>：27 个 <code>brand_</code> 工具、8 个 <code>brand-</code> 技能、工作守则注入 dsh；或以 MCP 服务器方式挂载。</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>七、员工赋能路径与部门转型</h2>
+  <div class="g4">
+    <div class="card"><span class="tag">用</span><h3>品牌 / 业务人员</h3><p>用对话交办问题，看证据、改措辞、点签发。不用学 BI。</p></div>
+    <div class="card"><span class="tag">改</span><h3>品类分析师</h3><p>在技能页修订 SOP；审核意见回写技能，下一份周报更准。</p></div>
+    <div class="card"><span class="tag">沉淀</span><h3>业务专家</h3><p>把一次成功分析「沉淀为技能」，变成部门可复用资产。</p></div>
+    <div class="card"><span class="tag">开发</span><h3>数据 / 数字化同事</h3><p>在工具台、CLI、MCP 上组合工具，开发新分析；用接口推入新数据源。</p></div>
+  </div>
+  <div class="card" style="margin-top:14px"><h3>转型节奏（与建设方案里程碑对齐）</h3>
+    <ol class="flow">
+      <li><b>2026.12.31 一期</b> <span>— 食用油（福临门）全链路；总助手 + 洞察分析师 / 产品机会官 / 商情简报员；周报人工审核后发送</span></li>
+      <li><b>2027.3.31 全部上线</b> <span>— 六大板块 12 个品类接入；6 位专家齐备；约 30 项核心技能；数据接口对接采集与一方数据</span></li>
+      <li><b>2027.4 起 首年运营</b> <span>— 技能按月迭代；员工沉淀的技能进入技能库评审；按板块复制「求同存异」</span></li>
+    </ol>
+  </div>
+</section>
+</main>
+<footer class="w">brandHarness · 讨论稿演示 · 数据为福临门测试样本与 Demo 构造案例（界面中均标注来源） · 平台与智能体只对内运行</footer>
+</body>
+</html>
